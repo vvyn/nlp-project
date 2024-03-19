@@ -2,14 +2,13 @@ import discord
 from dotenv import load_dotenv
 import os
 import logging
-import requests
 
 load_dotenv('.env.local')
 
 # lets bot subscribe to bucket of events
-# intents = discord.Intents.default()
-# intents.message_content = True
-intents = discord.Intents(messages=True, guilds=True, reactions=True)
+intents = discord.Intents.default()
+intents.message_content = True
+# intents = discord.Intents(messages=True, guilds=True, reactions=True)
 
 # connection to discord
 client= discord.Client(intents=intents)
